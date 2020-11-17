@@ -55,16 +55,22 @@ Explanation:
 
 ## Question 3 (Optional. 20 points. Medium)
 
-In the Dynamic Programming Video, the 3rd example is to find the contiguous subarray (containing at least one number) which has the largest sum. Here we will use Dynamic Programming to solve Given an integer array nums, find the contiguous subarray within an array (containing at least one number) which has the largest product.
+In the [Dynamic Programming Video](https://www.youtube.com/watch?v=PY9sl9QZqSs&feature=youtu.be&ab_channel=arisaif), the 3rd example is to find the contiguous subarray (containing at least one number) which has the largest sum. Here we will use Dynamic Programming to solve a very similiar problem.
 
-Example 1:
-Input: [2,3,-2,4]
-Output: 6
-Explanation: [2,3] has the largest product 6.
+ Given an integer array nums, find the contiguous subarray within an array (containing at least one number) which has the largest product.
+
+Example 1: 
+
+Input: ```[2,3,-2,4]```
+
+Output: ```6```
+
+Explanation: Subarray ```[2,3]``` has the largest product 6.
 
 Example 2:
-Input: [-2,0,-1]
-Output: 0
+
+Input: ```[-2,0,-1]```
+Output: ```0```
 
 Write several tests using GTest for your function in tests/q3_student_test.cc, and run the following command to verify the functionality of your program.
 
