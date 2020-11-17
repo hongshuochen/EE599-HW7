@@ -6,7 +6,9 @@ bool CPPLib::canFinish(int numCourses, std::vector<std::pair<int, int>> &prerequ
 
 }
 // Question 2
-
+std::vector<std::vector<std::string>> CPPLib::NQueens (int n){
+    
+}
 // Question 3
 
 // Question 4

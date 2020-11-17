@@ -13,6 +13,8 @@ public:
   // q1
   bool canFinish(int numCourses, std::vector<std::pair<int, int>> &prerequisites);
 
+  // q2
+  std::vector<std::vector<std::string>> NQueens (int n);
   // q5
   std::vector<char> ShortestPath(std::vector<char> &vertices,
                                  std::vector<std::pair<char, char>> &edges,

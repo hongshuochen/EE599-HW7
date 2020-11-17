@@ -29,74 +29,29 @@ Output: true
 Input: 2, [[1,0], [0,1]] \
 Output: false
 
-## Question 2 (30 points. Medium - Hard)
+## Question 2 (no points. Medium, Optional)
 
-Given a directed graph, find out if it contains a cycle.
-Your task is to write the following three functions:
+Given a N*N chessboard, you want to place N queens on the chessboard, 
+so that any one of them won't attack each other. Return all possible solutions (Simulate the chessboard).
+Fill in the function:
 
-- ReachesACycle
-- HasCycle
-- ResetStatus
-We use following code to represent graph node.
-
-```c++
-enum class NodeStatus {
-  NotVisited,
-  Visiting,
-  Visited
-};
-
-struct GraphNode {
- int node_number;
- NodeStatus status;
- std::vector<GraphNode *> children;
- GraphNode(int n) : node_number(n) {
-   status = NodeStatus::NotVisited;
-  }
-};
+```cpp
+std::vector<std::vector<std::string>> NQueens (int n);
 ```
-
-The graph is implemented using the following code:
-
-```c++
-class PointerGraph {
-public:
- PointerGraph() {}
-
- // Returns true if a cycle is reachable from start_node
- bool ReachesACycle(GraphNode *start_node);
-
- // Returns true if the graph has a cycle
- bool HasCycle();
-
- // Resets the status of all nodes to NodeStatus::NotVisited
- void ResetStatus();
- std::vector<GraphNode *> _nodes;
-};
+- queens will attack each other if they are in the same row / column, or they are in diagonal line.
+- Each solution contains a distinct board configuration of the n-queens' placement, where 'Q' and '.' both indicate a queen and an empty space, respectively.
+- for example:
 ```
-
-Here are few examples:
-Example 1
-
-- Input:
-
-<p align="center"><img width="40%" src="Picture2-1.png" /></p>
-
-- Output: ```ReachesACycle``` for node 1 returns true. ```ReachesACycle``` for node 5 returns false. ```HasCycle``` returns true.
-
-Example 2
-
-- Input:
-
-<p align="center"><img width="40%" src="Picture2-2.png" /></p>
-
-- Output: ```ReachesACycle``` for node 0 returns true. ```ReachesACycle``` for node 4 returns false. ```HasCycle``` returns true.
-
-Write several tests using GTest for your function in tests/q2_student_test.cc, and run the following command to verify the functionality of your program.
-
-```shell
-bazel test tests:q2_student_test
+Input: n = 4
+Output: [
+  [".Q..","...Q","Q...","..Q."],
+  ["..Q.","Q...","...Q",".Q.."]
+  ]
 ```
+Explanation:
+<p align="center"><img width="60%" src="Picture2-1.jpg" /></p>
+
+
 
 ## Question 3 (20 points. Medium)
 
