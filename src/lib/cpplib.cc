@@ -2,7 +2,7 @@
 #include "limits"
 
 // Question 1
-bool CPPLib::canFinish(int numCourses, std::vector<std::pair<int, int>> &prerequisites) {
+vector<vector<int>> CPPLib::permuteUnique(vector<int>& nums) {
 
 }
 // Question 2

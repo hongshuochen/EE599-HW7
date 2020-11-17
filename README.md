@@ -10,25 +10,19 @@
 - Deadline: Fri, Nov 13th 2020 by 06:30 pm
 - Total: 120 points. 100 points is considered full credit.
 
-## Question 1 (30 pints, Medium)
+## Question 1 (20 pints, Medium)
 
-There are a total of numCourses courses you have to take, labeled from 0 to numCourses-1.
-Some courses may have prerequisites, for example to take course 0 you have to first take course 1, which is expressed as a pair: [0,1]
-Given the total number of courses and a list of prerequisite pairs, if it is possible for you to finish all courses return true else return false.
+Given a collection of numbers that might contain duplicates, return all possible unique permutations.
 
-Hint: This question could be solved by topological sort or checking whether there is a loop inside the graph.
+Example:
+input: [1, 1, 2]
+output: [ [1,1,2], [1,2,1], [2,1,1] ]
 
-```c++
-bool canFinish(int numCourses, std::vector<std::pair<int, int>> &prerequisites)
+Write several tests using GTest for your function in tests/q1_student_test.cc, and run the following command to verify the functionality of your program.
+
+```shell
+bazel test tests:q1_student_test
 ```
-2 courses, take course 1 you have to first take course 0 \
-Input: 2, [[1,0]] \
-Output: true
-
-2 courses, take course 1 you have to first take course 0, and take course 0 you have to first take course 1 \
-Input: 2, [[1,0], [0,1]] \
-Output: false
-
 ## Question 2 (no points. Medium, Optional)
 
 Given a N*N chessboard, you want to place N queens on the chessboard, 

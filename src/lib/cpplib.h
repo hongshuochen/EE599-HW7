@@ -6,12 +6,13 @@
 #include <string>
 #include <vector>
 #include <set>
-
+#include <iostream>
+using namespace std;
 class CPPLib
 {
 public:
   // q1
-  bool canFinish(int numCourses, std::vector<std::pair<int, int>> &prerequisites);
+  vector<vector<int>> permuteUnique(vector<int>& nums);
 
   // q2
   std::vector<std::vector<std::string>> NQueens (int n);
