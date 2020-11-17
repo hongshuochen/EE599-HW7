@@ -10,4 +10,6 @@ std::vector<std::vector<std::string>> CPPLib::NQueens (int n){
 
 }
 // Question 3
-
+int CPPLib::maxProduct(vector<int>& nums){
+    
+}

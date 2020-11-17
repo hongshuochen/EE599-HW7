@@ -17,6 +17,9 @@ public:
   // q2
   std::vector<std::vector<std::string>> NQueens (int n);
 
+  // q3
+  int maxProduct(vector<int>& nums);
 private:
 };
+#endif
 
