@@ -23,6 +23,7 @@ Write several tests using GTest for your function in tests/q1_student_test.cc, a
 ```shell
 bazel test tests:q1_student_test
 ```
+
 ## Question 2 (Optional. Medium, No Points)
 
 Given a N*N chessboard, you want to place N queens on the chessboard, 
@@ -32,11 +33,13 @@ Fill in the function:
 ```cpp
 std::vector<std::vector<std::vector<int>>> NQueens (int n);
 ```
+
 - Queens will attack each other if they are in the same row / column, or they are in the same diagonal line.
 - Each solution contains a distinct board (a 2-D matrix) configuration of the n-queens' placement, where 1 and 0 both indicate a queen and an empty space, respectively. Permutation in the output vector is out of our consideration.
 - What's the algorithm's time complexity?
 - Example input and output:
-```
+
+```shell
 Input: n = 4
 
 Output: [
@@ -44,11 +47,13 @@ Output: [
   [[0,0,1,0], [1,0,0,0], [0,0,0,1], [0,1,0,0]]
 ]
 ```
+
 Explanation:
 <p align="center"><img width="60%" src="Picture2-1.jpg" /></p>
 
 Write several tests using GTest for your function in `tests/q2_student_test.cc`, and run the following command to verify the functionality of your program.
 *Notice that you are allowed to just check the length of the solution:*
+
 ```cpp
 TEST(BacktrackingTest, EightQueen_4) {
   auto solutions = CPPLib::NQueens(4);
@@ -84,6 +89,3 @@ Write several tests using GTest for your function in tests/q3_student_test.cc, a
 ```shell
 bazel test tests:q3_student_test
 ```
-
-
-
