@@ -10,7 +10,7 @@
 - Deadline: Fri, Nov 13th 2020 by 06:30 pm
 - Total: 120 points. 100 points is considered full credit.
 
-## Question 1 (20 pints, Medium)
+## Question 1 (Medium, 20 Points)
 
 Given a collection of numbers that might contain duplicates, return all possible unique permutations.
 
@@ -23,31 +23,44 @@ Write several tests using GTest for your function in tests/q1_student_test.cc, a
 ```shell
 bazel test tests:q1_student_test
 ```
-## Question 2 (no points. Medium, Optional)
+## Question 2 (Optional. Medium, No Points)
 
 Given a N*N chessboard, you want to place N queens on the chessboard, 
-so that any one of them won't attack each other. Return all possible solutions (Simulate the chessboard).
+so that any one of them won't attack each other. Return all possible solutions (Simulate the chessboard). 
 Fill in the function:
 
 ```cpp
-std::vector<std::vector<std::string>> NQueens (int n);
+std::vector<std::vector<std::vector<int>>> NQueens (int n);
 ```
-- queens will attack each other if they are in the same row / column, or they are in diagonal line.
-- Each solution contains a distinct board configuration of the n-queens' placement, where 'Q' and '.' both indicate a queen and an empty space, respectively.
-- for example:
+- Queens will attack each other if they are in the same row / column, or they are in diagonal line.
+- Each solution contains a distinct board (a 2-D matrix) configuration of the n-queens' placement, where 1 and 0 both indicate a queen and an empty space, respectively. Permutation in the output vector is out of our consideration.
+- What's the algorithm's time complexity?
+- Example input and output:
 ```
 Input: n = 4
+
 Output: [
-  [".Q..","...Q","Q...","..Q."],
-  ["..Q.","Q...","...Q",".Q.."]
-  ]
+  [[0,1,0,0], [0,0,0,1], [1,0,0,0], [0,0,1,0]],
+  [[0,0,1,0], [1,0,0,0], [0,0,0,1], [0,1,0,0]]
+]
 ```
 Explanation:
 <p align="center"><img width="60%" src="Picture2-1.jpg" /></p>
 
+Write several tests using GTest for your function in `tests/q2_student_test.cc`, and run the following command to verify the functionality of your program.
+*Notice that you are allowed to just check the length of the solution:*
+```cpp
+TEST(BacktrackingTest, EightQueen_4) {
+  auto solutions = CPPLib::NQueens(4);
+  EXPECT_EQ(solutions.size(), 2);
+}
+```
 
+```shell
+bazel test tests:q2_student_test
+```
 
-## Question 3 (Optional. 20 points. Medium)
+## Question 3 (Optional. Medium, No Points)
 
 In the [Dynamic Programming Video](https://www.youtube.com/watch?v=PY9sl9QZqSs&feature=youtu.be&ab_channel=arisaif), the 3rd example is to find the contiguous subarray (containing at least one number) which has the largest sum. Here we will use Dynamic Programming to solve a very similiar problem.
 

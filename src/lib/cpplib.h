@@ -15,7 +15,7 @@ public:
   vector<vector<int>> permuteUnique(vector<int>& nums);
 
   // q2
-  std::vector<std::vector<std::string>> NQueens (int n);
+  std::vector<std::vector<std::vector<int>>> NQueens (int n);
 
   // q3
   int maxProduct(vector<int>& nums);
