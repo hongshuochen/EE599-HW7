@@ -7,10 +7,10 @@
 - For coding questions, there is a **black box** testing for each question. All points are only based on passing the test cases or not (i.e. we don't grade your work by your source code). So, try to do comprehensive testing before your final submission.
 
 - For submission, please push your answers to Github before the deadline.
-- Deadline: Fri, Nov 13th 2020 by 06:30 pm
-- Total: 120 points. 100 points is considered full credit.
+- Deadline: Fri, Nov 27th 2020 by 06:30 pm
+- Total: 30 points. 30 points is considered full credit.
 
-## Question 1 (Medium, 20 Points)
+## Question 1 (Medium, 30 Points)
 
 Given a collection of numbers that might contain duplicates, return all possible unique permutations.
 
