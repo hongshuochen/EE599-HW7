@@ -32,7 +32,7 @@ Fill in the function:
 ```cpp
 std::vector<std::vector<std::vector<int>>> NQueens (int n);
 ```
-- Queens will attack each other if they are in the same row / column, or they are in diagonal line.
+- Queens will attack each other if they are in the same row / column, or they are in the same diagonal line.
 - Each solution contains a distinct board (a 2-D matrix) configuration of the n-queens' placement, where 1 and 0 both indicate a queen and an empty space, respectively. Permutation in the output vector is out of our consideration.
 - What's the algorithm's time complexity?
 - Example input and output:
